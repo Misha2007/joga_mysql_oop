@@ -11,5 +11,8 @@ router.get("/article/:slug", (req, res) =>
 router.post("/article/create", (req, res) =>
   articleController.createNewArticle(req, res)
 );
+router.patch("/article/edit/:id", (req, res) =>
+  articleController.updateArticle(req, res)
+);
 
 module.exports = router;
