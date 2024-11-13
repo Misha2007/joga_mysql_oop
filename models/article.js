@@ -14,6 +14,11 @@ class ArticleModel extends BaseSQLModel {
     const article = await super.findOne("slug", slug);
     return article;
   }
+
+  async create(article) {
+    const createdArticleId = await super.create(article);
+    return createdArticleId;
+  }
 }
 
 module.exports = ArticleModel;
